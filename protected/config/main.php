@@ -16,7 +16,7 @@ Yii::setPathOfAlias('ace',$baseath . '..' . DIRECTORY_SEPARATOR . 'themes' . DIR
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Web Design, Web Application, IOS, Android technical solution',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
