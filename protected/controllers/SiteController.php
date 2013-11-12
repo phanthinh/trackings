@@ -20,7 +20,9 @@ class SiteController extends ProjectController
 			),
 		);
 	}
-	
+	public function actionIndex(){
+		$this->render('index');
+	}
 	/**
 	 * This is the action to handle external exceptions.
 	 */

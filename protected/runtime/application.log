@@ -9157,3 +9157,59 @@ Stack trace:
 REQUEST_URI=/
 HTTP_REFERER=http://local.trackings.com/rights/mapPermission
 ---
+2013/11/12 10:14:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 C:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\trackings\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2013/11/12 10:14:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackings\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/11/12 10:15:35 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\trackings\protected\config\function_alias.php:3)
+Stack trace:
+#0 C:\xampp\htdocs\trackings\library\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(869): SiteController->renderFile()
+#2 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#3 C:\xampp\htdocs\trackings\protected\controllers\SiteController.php(24): SiteController->render()
+#4 C:\xampp\htdocs\trackings\library\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#5 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackings\index.php(12): CWebApplication->run()
+REQUEST_URI=/
+in C:\xampp\htdocs\trackings\protected\config\function_alias.php (3)
+in C:\xampp\htdocs\trackings\protected\views\site\index.php (1)
+in C:\xampp\htdocs\trackings\protected\controllers\SiteController.php (24)
+2013/11/12 10:17:16 [error] [php] include(Goals.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\trackings\library\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\trackings\protected\views\site\index.php(211): spl_autoload_call()
+#1 C:\xampp\htdocs\trackings\library\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\trackings\library\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\trackings\protected\controllers\SiteController.php(24): SiteController->render()
+#6 C:\xampp\htdocs\trackings\library\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\trackings\index.php(12): CWebApplication->run()
+REQUEST_URI=/
+in C:\xampp\htdocs\trackings\protected\views\site\index.php (211)
+in C:\xampp\htdocs\trackings\protected\controllers\SiteController.php (24)
+in C:\xampp\htdocs\trackings\index.php (12)

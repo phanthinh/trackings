@@ -5,7 +5,7 @@ class ProjectController extends Controller {
 	public $des = null;
 	public function init() {
 		parent::init();
-		Yii::app()->theme="tickgoals";
+		Yii::app()->theme="frontend";
 		
 	}
 	/**
