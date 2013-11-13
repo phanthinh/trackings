@@ -78,12 +78,12 @@
 												array(
 													'header'=>'Action',
 													'class'=>'ext.bootstrap.widgets.TbButtonColumn',
-													'template'=>'{update}{delete}',
+													'template'=>'{updateImage}{delete}',
 													'buttons' => array(
-														'update' => array(
+														'updateImage' => array(
 															'label'=>'Update',
-															'icon'=>'icon-edit bigger-120',
-															'url' => 'Yii::app()->createUrl("/categories/admin/update", array("id"=>outStr($data->id)))',
+															'icon'=>'icon-picture bigger-120',
+															'url' => 'Yii::app()->createUrl("/images/admin/update", array("id"=>outStr($data->image->id)))',
 															'options'=>array(
 																'class'=>'btn btn-xs btn-info',
 															)

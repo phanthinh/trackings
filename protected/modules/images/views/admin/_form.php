@@ -6,8 +6,11 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'images-form',
+	'htmlOptions'=>array(
+		'class'=>'form-horizontal'
+	),
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -15,32 +18,34 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'id'); ?>
-	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
+	<div class="form-group">
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-		<?php echo $form->error($model,'status'); ?>
+		<div class="col-sm-9">
+			<?php echo $form->textFieldRow($model,'name',array('class'=>'span5','maxlength'=>200)); ?>
+		</div>
 	</div>
+	<div class="space-4"></div>
+	
+	<div class="form-group">
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<div class="col-sm-9">
+			<?php echo $form->textFieldRow($model,'created',array('class'=>'span5','maxlength'=>200)); ?>
+		</div>
+	</div>
+	<div class="space-4"></div>
+
+
+	<div class="clearfix form-actions">
+		<div class="col-md-offset-3 col-md-9">
+			<?php $this->widget('bootstrap.widgets.TbButton', array(
+				'buttonType'=>'submit',
+				'type'=>'primary',
+				'label'=>$model->isNewRecord ? 'Create' : 'Save',
+				'htmlOptions'=>array('class'=>'button')
+			)); ?>
+		</div>
 	</div>
 
 <?php $this->endWidget(); ?>

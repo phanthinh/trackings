@@ -112,9 +112,12 @@ class AdminController extends BackEndController
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
+		Yii::import("xupload.models.XUploadForm");
+        $modelXUploadForm = new XUploadForm;
+		
 		$this->render('update',array(
 			'model'=>$model,
+			'modelXUploadForm'=>$modelXUploadForm,
 		));
 	}
 
