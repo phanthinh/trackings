@@ -172,7 +172,7 @@ class AdminController extends BackEndController
 	 */
 	public function loadModel($id)
 	{
-		$model=Images::model()->findByPk($id);
+		$model=Images::model()->findByPk(outBin($id));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

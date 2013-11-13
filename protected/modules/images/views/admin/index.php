@@ -109,7 +109,7 @@
 														'update' => array(
 															'label'=>'Update',
 															'icon'=>'icon-edit bigger-120',
-															'url' => 'Yii::app()->createUrl("/user/groups/update", array("id"=>outStr($data->id)))',
+															'url' => 'Yii::app()->createUrl("/images/admin/update", array("id"=>outStr($data->id)))',
 															'options'=>array(
 																'class'=>'btn btn-xs btn-info',
 															)
@@ -117,7 +117,7 @@
 														'delete' => array(
 															'label'=>'Delete',
 															'icon'=>'icon-trash bigger-120',
-															'url' => 'Yii::app()->createUrl("/user/groups/delete", array("id"=>outStr($data->id)))',
+															'url' => 'Yii::app()->createUrl("/images/admin/delete", array("id"=>outStr($data->id)))',
 															'options'=>array(
 																'class'=>'btn btn-xs btn-danger',
 															)
