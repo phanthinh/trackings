@@ -980,3 +980,53 @@ Stack trace:
 REQUEST_URI=/categories/admin/view/id/R%83O%84%91%1CH%A1%98%83%1B%BFxxxx
 HTTP_REFERER=http://local.trackings.com:8012/categories/admin/create
 ---
+2013/11/13 14:06:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 E:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\trackings\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/11/13 14:08:08 [error] [php] include(E:\xampp\htdocs\trackings\protected\extensions\xupload\models\XUploadForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\htdocs\trackings\library\yii\framework\YiiBase.php:395)
+Stack trace:
+#0 E:\xampp\htdocs\trackings\protected\modules\images\controllers\AdminController.php(143): spl_autoload_call()
+#1 E:\xampp\htdocs\trackings\library\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#2 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(286): AdminController->runAction()
+#4 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#5 E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#6 E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\trackings\index.php(12): CWebApplication->run()
+REQUEST_URI=/images/admin
+in E:\xampp\htdocs\trackings\protected\modules\images\controllers\AdminController.php (143)
+in E:\xampp\htdocs\trackings\index.php (12)
+2013/11/13 14:09:40 [error] [php] include(E:\xampp\htdocs\trackings\protected\extensions\xupload\models\XUploadForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\htdocs\trackings\library\yii\framework\YiiBase.php:395)
+Stack trace:
+#0 E:\xampp\htdocs\trackings\protected\modules\images\controllers\AdminController.php(143): spl_autoload_call()
+#1 E:\xampp\htdocs\trackings\library\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#2 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(286): AdminController->runAction()
+#4 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#5 E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#6 E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\trackings\index.php(12): CWebApplication->run()
+REQUEST_URI=/images/admin
+in E:\xampp\htdocs\trackings\protected\modules\images\controllers\AdminController.php (143)
+in E:\xampp\htdocs\trackings\index.php (12)
+2013/11/13 14:10:04 [error] [php] include(E:\xampp\htdocs\trackings\protected\extensions\xupload\models\XUploadForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\htdocs\trackings\library\yii\framework\YiiBase.php:395)
+Stack trace:
+#0 E:\xampp\htdocs\trackings\protected\modules\images\controllers\AdminController.php(143): spl_autoload_call()
+#1 E:\xampp\htdocs\trackings\library\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#2 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(286): AdminController->runAction()
+#4 E:\xampp\htdocs\trackings\library\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#5 E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#6 E:\xampp\htdocs\trackings\library\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\xampp\htdocs\trackings\library\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\trackings\index.php(12): CWebApplication->run()
+REQUEST_URI=/images/admin
+in E:\xampp\htdocs\trackings\protected\modules\images\controllers\AdminController.php (143)
+in E:\xampp\htdocs\trackings\index.php (12)
