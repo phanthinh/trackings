@@ -7,6 +7,7 @@ $baseath = dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 Yii::setPathOfAlias('widgets',$strPath.DIRECTORY_SEPARATOR.'widgets');
+Yii::setPathOfAlias('ext', dirname(__FILE__) . "/../extensions");
 // Yii::setPathOfAlias('utils',$baseath.DIRECTORY_SEPARATOR.'utils');
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__) . "/../extensions/bootstrap");
 // This is the main Web application configuration. Any writable
@@ -31,13 +32,17 @@ return array(
 		'application.modules.user.models.*',
 		'application.modules.user.models.Users',
 		
-		
 		'application.modules.rights.*',
 		'application.modules.rights.components.*',
 		
 		
 		
-		
+		'application.modules.images.*',
+		'application.modules.images.components.*',
+		'application.modules.images.models.*',
+		'application.modules.categories.*',
+		'application.modules.categories.components.*',
+		'application.modules.categories.models.*',
 		
 	),
 
@@ -45,6 +50,11 @@ return array(
 		// uncomment the following to enable the Gii tool
         'user',
         'rights',
+		
+        'images',
+        'categories',
+        'api',
+		
 		'gii'=>array(
 			'class' => 'system.gii.GiiModule',
 			'password' => 'qthinh',
@@ -57,6 +67,10 @@ return array(
 		),
 		
 		
+	),
+	'aliases' => array(
+		//If you manually installed it
+		'xupload' => 'ext.xupload'
 	),
 	'language'=> 'en',
 	// application components

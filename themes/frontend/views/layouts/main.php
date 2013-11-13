@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app xmlns:ng="http://angularjs.org" id="ng-app">
 	
 	<head>
 		<title><?php echo Yii::app()->name;?></title>
@@ -10,10 +10,26 @@
 		<link rel="stylesheet" href="<?php echo baseTheme();?>/assets/bower_components/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo baseTheme();?>/assets/assets/css/bootswatch.min.css">
 		<link rel="stylesheet" href="<?php echo baseTheme();?>/css/main.css" media="screen">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+		<script src="<?php echo baseTheme();?>/js/main.js"></script>
+		
 		<script type="text/javascript">
-
+			main.templateURL = "<?php echo Yii::app()->createUrl('/');?>";
 			
 		</script>
+		<script src="<?php echo baseTheme();?>/js/components.js"></script>
+		<!--[if lte IE 8]>
+		<script>
+			document.createElement('ng-include');
+			document.createElement('ng-pluralize');
+			document.createElement('ng-view');
+
+			// Optionally these for CSS
+			document.createElement('ng:include');
+			document.createElement('ng:pluralize');
+			document.createElement('ng:view');
+		</script>
+		<![endif]-->
 	</head>
 	<body>
 		
@@ -27,24 +43,13 @@
 					<span class="icon-bar"></span>
 					</button>
 				</div>
-				<div class="navbar-collapse collapse" id="navbar-main">
-					<ul class="nav navbar-nav">
+
+				
+				<div class="navbar-collapse collapse" id="navbar-main" ng-app="menu-header">
+					<ul class="nav navbar-nav" >
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Categories <span class="caret"></span></a>
-							<ul class="dropdown-menu" aria-labelledby="themes">
-								<li><a tabindex="-1" href="../default/index.html">Default</a></li>
-								<li class="divider"></li>
-								<li><a tabindex="-1" href="../amelia/index.html">Amelia</a></li>
-								<li><a tabindex="-1" href="../cerulean/index.html">Cerulean</a></li>
-								<li><a tabindex="-1" href="../cosmo/index.html">Cosmo</a></li>
-								<li><a tabindex="-1" href="../cyborg/index.html">Cyborg</a></li>
-								<li><a tabindex="-1" href="../flatly/index.html">Flatly</a></li>
-								<li><a tabindex="-1" href="index.html">Journal</a></li>
-								<li><a tabindex="-1" href="../readable/index.html">Readable</a></li>
-								<li><a tabindex="-1" href="../simplex/index.html">Simplex</a></li>
-								<li><a tabindex="-1" href="../slate/index.html">Slate</a></li>
-								<li><a tabindex="-1" href="../spacelab/index.html">Spacelab</a></li>
-								<li><a tabindex="-1" href="../united/index.html">United</a></li>
+							<ul class="dropdown-menu" aria-labelledby="themes"  menu-categories	>
 							</ul>
 						</li>
 						<li>

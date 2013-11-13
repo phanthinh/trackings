@@ -398,7 +398,7 @@
 								</li>
 							</ul>
 
-								
+						</li>	
 
 						<li class="<?php echo (Yii::app()->controller->module->id  == "user" && Yii::app()->controller->id ==  "groups") ? "active" : "";?>">
 							<a href="#" class="dropdown-toggle">
@@ -425,49 +425,34 @@
 							</ul>
 						</li>
 
-						<li>
+						<li class="<?php echo (Yii::app()->controller->module->id  == "categories" && Yii::app()->controller->id ==  "admin") ? "active" : "";?>">
 							<a href="#" class="dropdown-toggle">
-								<i class="icon-edit"></i>
-								<span class="menu-text"> Forms </span>
+								<i class="icon-th-list"></i>
+								<span class="menu-text"> Categories </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
 							<ul class="submenu">
 								<li>
-									<a href="form-elements.html">
+									<a href="<?php echo Yii::app()->createUrl("/categories/admin");?>">
 										<i class="icon-double-angle-right"></i>
-										Form Elements
+										Manage categories
 									</a>
 								</li>
-
 								<li>
-									<a href="form-wizard.html">
+									<a href="<?php echo Yii::app()->createUrl("/categories/admin/create");?>">
 										<i class="icon-double-angle-right"></i>
-										Wizard &amp; Validation
-									</a>
-								</li>
-
-								<li>
-									<a href="wysiwyg.html">
-										<i class="icon-double-angle-right"></i>
-										Wysiwyg &amp; Markdown
-									</a>
-								</li>
-
-								<li>
-									<a href="dropzone.html">
-										<i class="icon-double-angle-right"></i>
-										Dropzone File Upload
+										Create category
 									</a>
 								</li>
 							</ul>
 						</li>
 
-						<li>
-							<a href="widgets.html">
-								<i class="icon-list-alt"></i>
-								<span class="menu-text"> Widgets </span>
+						<li class="<?php echo (Yii::app()->controller->module->id  == "images" && Yii::app()->controller->id ==  "admin") ? "active" : "";?>">
+							<a href="<?php echo Yii::app()->createUrl("/images/admin");?>">
+								<i class="icon-picture"></i>
+								<span class="menu-text"> Images </span>
 							</a>
 						</li>
 

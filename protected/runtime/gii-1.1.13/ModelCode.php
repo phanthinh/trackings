@@ -3,7 +3,7 @@ return array (
   'template' => 'default',
   'connectionId' => 'db',
   'tablePrefix' => '',
-  'modelPath' => 'application.models',
-  'baseClass' => 'CActiveRecord',
+  'modelPath' => 'application.modules.categories.models',
+  'baseClass' => 'JLActiveRecord',
   'buildRelations' => '1',
 );

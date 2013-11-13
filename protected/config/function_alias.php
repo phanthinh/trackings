@@ -9,7 +9,7 @@ function outBin($str=NULL){
 	return IDHelper::uuidToBinary($str,true);
 }
 function outStr($str=NULL){
-	return IDHelper::uuidFromBinary($str);
+	return IDHelper::uuidFromBinary($str,true);
 }
 function jsonOut($obj, $exit = true) {
 	error_reporting(0);
