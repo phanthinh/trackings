@@ -49,10 +49,8 @@
 										data.formData = inputs.serializeArray();
 									}",
 									'success' =>"js:function(res){
-										console.log(res);
-										$.post('".Yii::app()->createUrl("images/admin/create")."',{name:res[0].name},function(data){
-											$('#Categories_image_id').val(data.id);
-										});
+										console.log(res[0].name);
+										$('#Images_name').val(res[0].name);
 									}"
 									
 								)
