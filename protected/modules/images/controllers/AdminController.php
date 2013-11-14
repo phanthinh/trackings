@@ -110,7 +110,7 @@ class AdminController extends BackEndController
 		{
 			$model->attributes=$_POST['Images'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(Yii::app()->createUrl('/categories/admin'));
 		}
 		Yii::import("xupload.models.XUploadForm");
         $modelXUploadForm = new XUploadForm;
