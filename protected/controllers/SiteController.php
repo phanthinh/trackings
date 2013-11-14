@@ -21,7 +21,22 @@ class SiteController extends ProjectController
 		);
 	}
 	public function actionIndex(){
-		$this->render('index');
+		$categories = Categories::model()->gets();
+		$data = array();
+		foreach($categories as $key=>$category){
+			$image = $category->image;
+			$category->id = outStr($category->id);
+			$image = Images::model()->findByPk($category->image_id);
+			$category->image_id = outStr($category->image_id);
+			$arr = $category->attributes;
+			// dump($image);
+			
+			$arr['thumb'] = !empty($image) ? Yii::app()->createAbsoluteUrl("/upload/images/fill/360-225/{$image->name}") : null;
+			$data[] = $arr;
+		}
+		$this->render('index',array(
+			'skills'=>$data
+		));
 	}
 	/**
 	 * This is the action to handle external exceptions.

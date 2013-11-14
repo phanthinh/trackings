@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app xmlns:ng="http://angularjs.org" id="ng-app">
+<html lang="en" xmlns:ng="http://angularjs.org" >
 	
 	<head>
 		<title><?php echo Yii::app()->name;?></title>
@@ -10,14 +10,17 @@
 		<link rel="stylesheet" href="<?php echo baseTheme();?>/assets/bower_components/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo baseTheme();?>/assets/assets/css/bootswatch.min.css">
 		<link rel="stylesheet" href="<?php echo baseTheme();?>/css/main.css" media="screen">
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js'></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.js"></script>
+		
 		<script src="<?php echo baseTheme();?>/js/main.js"></script>
 		
 		<script type="text/javascript">
 			main.templateURL = "<?php echo Yii::app()->createUrl('/');?>";
 			
 		</script>
-		<script src="<?php echo baseTheme();?>/js/components.js"></script>
+		
 		<!--[if lte IE 8]>
 		<script>
 			document.createElement('ng-include');
@@ -31,7 +34,7 @@
 		</script>
 		<![endif]-->
 	</head>
-	<body>
+	<body ng-app>
 		
 		<div class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
@@ -70,19 +73,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="page-header" id="banner">
-				<div class="row">
-					<div class="col-lg-6">
-						<h1>Journal</h1>
-						<p class="lead">Crisp like a new sheet of paper</p>
-					</div>
-					<div class="col-lg-6">
-						<div class="bsa well">
-							<div id="bsap_1277971" class="bsarocks bsap_c466df00a3cd5ee8568b5c4983b6bb19"></div>
-						</div>
-					</div>
-				</div>
-			</div>
+
 			
 			<?php echo $content;?>
 			<footer>
@@ -104,6 +95,7 @@
 		
 		<script src="<?php echo baseTheme();?>/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="<?php echo baseTheme();?>/assets/assets/js/bootswatch.js"></script>
+		<script src="<?php echo baseTheme();?>/js/components.js"></script>
 	</body>
 	
 </html>

@@ -99,7 +99,16 @@ class Categories extends JLActiveRecord
 	}
 	public static function gets($limit = null){
 		$criteria=new CDbCriteria();
-		if(!empty($limit)) $criteria->limit = $limit;
+		
+		if(!empty($limit)){
+			
+			$count=Categories::model()->count($criteria);
+			$pages=new CPagination($count);
+
+			// results per page
+			$pages->pageSize=$limit;
+			$pages->applyLimit($criteria);
+		}
 		
 		$categories = Categories::model()->findAll($criteria);
 		return $categories;

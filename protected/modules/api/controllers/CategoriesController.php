@@ -4,7 +4,9 @@ class CategoriesController extends Controller
 {
 	public function actionIndex()
 	{
-		$categories = Categories::model()->gets();
+		$page = Yii::app()->request->getParam('page',null);
+		$per_page = Yii::app()->request->getParam('per_page',null);
+		$categories = Categories::model()->gets($per_page);
 		$data = array();
 		foreach($categories as $key=>$category){
 			$image = $category->image;
@@ -14,7 +16,7 @@ class CategoriesController extends Controller
 			$arr = $category->attributes;
 			// dump($image);
 			
-			$arr['thumb'] = !empty($image) ? Yii::app()->createAbsoluteUrl("/upload/images/thumbs/90-90/{$image->name}") : null;
+			$arr['thumb'] = !empty($image) ? Yii::app()->createAbsoluteUrl("/upload/images/fill/360-225/{$image->name}") : null;
 			$data[] = $arr;
 		}
 		jsonOut(array(
